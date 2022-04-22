@@ -5,8 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script type="text/javascript" src="js/jquery-scroll-swap.js"></script>
     <title>OUSD School Closures</title>
   </head>
+
+  <script>
+    jQuery(document).ready(function($){
+
+      var stickyElements = $('.sticky');
+      Stickyfill.add(stickyElements);
+
+
+      $(".scroll-container").scrollSwap({
+          dataImageAttribute: 'image',
+          triggerFromTop: 0.75,
+          speed: 0.5,
+          noCSS: false,
+          spreadDistance: "75vh",
+          backgroundColor: 'rgba(255,255,255,0.85)',
+          width: '50%'
+      });
+
+
+    });
+  </script>
   
   <body>
     <header role="banner" class="d-flex flex-column align-items-center justify-content-center vh-100">
@@ -23,25 +45,35 @@
           </div>
         </header>
 
-        <p>The Oakland Unified School District has slated seven schools for closure while four others will either merge or be downsized. The district said it’s closing schools due to declining enrollment and funding. The plans ignited community unrest among teachers, parents and students who are pleading to keep the schools open.</p>       
+        <p>The Oakland Unified School District has slated seven schools for closure while four others will either merge or be downsized. The district said it is closing schools due to declining enrollment and funding. The plans ignited community unrest among teachers, parents and students who are pleading to keep the schools open.</p>       
 
       </div>
     </article>
 
-    <div class="scroll-container">
-      <p data-image="assets/ClosedSchools.svg" data-position="right">It's clear now that we didn't do enough to prevent these tools from being used for harm as well. That goes for fake news, foreign interference in elections, and hate speech, as well as developers and data privacy.</p>
+    <!-- <div>
+      <embed class="col-7" id="map1" src="assets/ClosedSchools.svg" alt="A map showing the seven schools that will be closed in OUSD in this and the next school year.">
+    </div> -->
 
-      <p data-image="assets/MergeSchool.svg" data-position="right">Starting in the 1940s, United States broadcast television channels would air 10-to-15-minute segments of news programming one or two times per evening. The era of live-TV news coverage would begin in the 1960s with the assassination of John F. Kennedy, broadcast and reported to live on a variety of nationally syndicated television channels.</p>
 
-      <p data-image="assets/ShrunkSchool.svg" data-position="right">Journalistic conventions vary by country. In the United States, journalism is produced by media organizations or by individuals. Bloggers are often, but not always, journalists. The Federal Trade Commission requires that bloggers who write about products received as promotional gifts to disclose that they received the products for free. This is intended to eliminate conflicts of interest and protect consumers.</p>
+      <section>
+        <embed class="col-7" id="map1" src="assets/ClosedSchools.svg" alt="A map showing the seven schools that will be closed in OUSD in this and the next school year.">
 
-      <p data-image="assets/Grassvalley.svg" data-position="right">There are several forms of journalism with diverse audiences. Thus, journalism is said to serve the role of a "fourth estate", acting as a watchdog on the workings of the government. A single publication (such as a newspaper) contains many forms of journalism, each of which may be presented in different formats. Each section of a newspaper, magazine, or website may cater to a different audience.</p>
+        <p class="scroll-container "data-position="right">These are the seven schools that will be closed.</p>
+        
+      </section>
+      
 
-      <p data-image="assets/CommunityDay.svg" data-position="right">There are several forms of journalism with diverse audiences. Thus, journalism is said to serve the role of a "fourth estate", acting as a watchdog on the workings of the government. A single publication (such as a newspaper) contains many forms of journalism, each of which may be presented in different formats. Each section of a newspaper, magazine, or website may cater to a different audience.</p>
-      </div>
+      <!-- <p data-image="assets/MergeSchool.svg" data-position="right">p.</p>
 
-    <embed class="col-7" id="map1" src="assets/ClosedSchools.svg" alt="A map showing the seven schools that will be closed in OUSD in this and the next school year.">
-    
- 
+      <p data-image="assets/ShrunkSchool.svg" data-position="right">p.</p>
+
+      <p data-image="assets/Grassvalley.svg" data-position="right">p.</p>
+
+      <p data-image="assets/CommunityDay.svg" data-position="right">p.</p> -->
+
+    </div>
+
+
+
   </body>
 </html>
