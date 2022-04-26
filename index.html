@@ -5,30 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/jquery-scroll-swap.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="js/stickyfill.min.js"></script>
+    <script>
+      jQuery(document).ready(function($){
+
+        //polyfill for position:sticky, for ie 9+ browsers
+        //https://github.com/wilddeer/stickyfill
+        var stickyElements = $('.sticky');
+        Stickyfill.add(stickyElements);
+
+
+        $(".scroll-container").scrollSwap({
+            dataImageAttribute: 'image',
+            triggerFromTop: 0.75,
+            speed: 0.5,
+            noCSS: false,
+            spreadDistance: "75vh",
+            backgroundColor: 'rgba(255,255,255,0.85)',
+            width: '50%'
+        });
+
+
+      });
+    </script>
     <title>OUSD School Closures</title>
   </head>
 
-  <script>
-    jQuery(document).ready(function($){
-
-      var stickyElements = $('.sticky');
-      Stickyfill.add(stickyElements);
-
-
-      $(".scroll-container").scrollSwap({
-          dataImageAttribute: 'image',
-          triggerFromTop: 0.75,
-          speed: 0.5,
-          noCSS: false,
-          spreadDistance: "75vh",
-          backgroundColor: 'rgba(255,255,255,0.85)',
-          width: '50%'
-      });
-
-
-    });
-  </script>
   
   <body>
     <header role="banner" class="d-flex flex-column align-items-center justify-content-center vh-100">
@@ -50,30 +55,22 @@
       </div>
     </article>
 
-    <!-- <div>
-      <embed class="col-7" id="map1" src="assets/ClosedSchools.svg" alt="A map showing the seven schools that will be closed in OUSD in this and the next school year.">
-    </div> -->
 
+    <div class="scroll-container">
+          
+      <p data-image="assets/closedschools.svg" data-position="right">These schools will be closed: Parker Elementary School, Community Day School, Horace Mann Elementary School, Brookfield Village Elementary Schoo, Carl B. Munck Elementary School, Grass Valley Elementary, and Fred T. Korematsu Discovery Academy.</p>
 
-      <section>
-        <embed class="col-7" id="map1" src="assets/ClosedSchools.svg" alt="A map showing the seven schools that will be closed in OUSD in this and the next school year.">
+      <p data-image="assets/mergeschools.svg" data-position="right">These two schools will be merged: Rise Community Elementary School and New Highland Academy.</p>
 
-        <p class="scroll-container "data-position="right">These are the seven schools that will be closed.</p>
-        
-      </section>
-      
+      <p data-image="assets/shrunkschools.svg" data-position="right">The grades of these schools will be cut: La Escuelita Elementary School and Hillcrest Elementary School. </p>
 
-      <!-- <p data-image="assets/MergeSchool.svg" data-position="right">p.</p>
+      <p data-image="assets/grassvalley.svg" data-position="right">Also take Grass Valley Elementary as an example. It is the only elementary school in the radius of xxx and is located on the hill (or something similar to describ its location). But the school will be closed this year and the welcoming schools are located at xxx, at least xxx miles from it. </p>
 
-      <p data-image="assets/ShrunkSchool.svg" data-position="right">p.</p>
-
-      <p data-image="assets/Grassvalley.svg" data-position="right">p.</p>
-
-      <p data-image="assets/CommunityDay.svg" data-position="right">p.</p> -->
+      <p data-image="assets/communityday.svg" data-position="right">This is Community Day School, an alternative education for expelled students, does not have any welcoming schools. Instead, students will be referred to the Alameda County Program.</p>
 
     </div>
 
-
-
   </body>
 </html>
+
+<img class="col-7" ccccc>
