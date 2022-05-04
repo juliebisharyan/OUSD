@@ -11,9 +11,7 @@
     <script type="text/javascript" src="js/stickyfill.min.js"></script>
     <script>
       jQuery(document).ready(function($){
-
-        //polyfill for position:sticky, for ie 9+ browsers
-        //https://github.com/wilddeer/stickyfill
+        
         var stickyElements = $('.sticky');
         Stickyfill.add(stickyElements);
 
@@ -38,21 +36,17 @@
   <body>
     <header role="banner" class="d-flex flex-column align-items-center justify-content-center vh-100">
 
-      <h1>OUSD School Closures and How it Impacts its Students</h1>
+      <div>
+        <h1 id="headline">OUSD School Closures and How it Impacts its Students</h1>
+
+        <h5 id="description">Oakland Unified is planning to close, merge and downsize 11 schools </br> this year and next. Black and Brown students will be disproportionately impacted.</h5>
+
+        <p>By <a href="https://twitter.com/xueer_lu">Xueer Lu</a>, <a href="https://twitter.com/TzulRichard">Richard Tzul</a>, <a href="https://twitter.com/mstopicsentence">Julietta Bisharyan</a> and<a href="https://www.linkedin.com/in/shuqi-li-354354223/"> Shuqi Li</a></p>
+      </div>
 
     </header>
 
-    <article role="main">
-      <div class="container mt-5">
-        <header class="my-5 row justify-content-center">
-          <div class="col-12 col-md-10 text-center">
-            <p class="small pt-5">By Xueer Lu, Richard Tzul, Julietta Bisharyan and Shuqi Li</p>
-          </div>
-        </header>
-      </div>
-    </article>
-
-    <p class="body">The Oakland Unified School District has slated seven schools for closure while four others will either merge or be downsized. The district said it’s closing schools due to declining enrollment and funding. The plans ignited community unrest among teachers, parents and students, who are pleading to keep the schools open.</p>       
+    <p id="paragraph1">The Oakland Unified School District has slated seven schools for closure while four others will either merge or be downsized. The district said it’s closing schools due to declining enrollment and funding. The plans ignited community unrest among teachers, parents and students, who are pleading to keep the schools open.</p>       
 
 
     <div class="scroll-container">
@@ -63,10 +57,9 @@
 
       <p data-image="assets/shrunkschools.svg" data-position="right">The <span class="shrunk">middle school grades of these schools will be cut</span>: La Escuelita Elementary School and Hillcrest Elementary School. </p>
 
-      <p data-image="assets/grassvalley.svg" data-position="right"><span class="closed">Grass Valley Elementary</span> is the only elementary school in the radius of xxx and is located on the hill (or something similar to describ its location). But the school will be closed this year and the <span class="welcome">welcoming schools</span> are located at xxx, at least xxx miles from it. </p>
+      <p data-image="assets/grassvalley.svg" data-position="right"><span class="closed">Grass Valley Elementary</span>, for example, is about three miles away from its closest <span class="welcome">welcoming school</span>. This means students who live in that area will have to travel farther to get to their new school.</p>
 
-      <p data-image="assets/communityday.svg" data-position="right">This is <span class="closed">Community Day School</span>, an alternative education for expelled students, does not have any welcoming schools. Instead, students will be referred to the Alameda County Program.</p>
-
+      <p data-image="assets/communityday.svg" data-position="right"><span class="closed">Community Day School</span>, an alternative education program for expelled students, does not have any welcoming students. Instead, students there will be referred to the Alameda County Program.</p>
     </div>
 
     <div class="body">
@@ -115,9 +108,8 @@
       <p>Hillcrest had 394 students in the 2020-2021 school year compared to 377 in the 2016-2017 school year. La Escuelita experienced declining enrollment between 2017 and 2019, but in the 2020-2021 school year, enrollment was at 408,  compared to 2016-2017’s school year of 404.</p>
     </div>
 
-    <div class="body">
-      <iframe title="Enrollment at Each School" aria-label="Column Chart" id="datawrapper-chart-uYqCX" src="https://datawrapper.dwcdn.net/uYqCX/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="203"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-      </script>
+    <div class="body">  
+      <iframe title="Enrollment at Each School" aria-label="Column Chart" id="datawrapper-chart-qUm4s" src="https://datawrapper.dwcdn.net/qUm4s/2/" scrolling="no" frameborder="0" style="border: none;" width="600" height="600"></iframe>
     </div>
 
     <div class="body">
